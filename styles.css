@@ -150,7 +150,7 @@ p {
     height: 15px;
     background: var(--color-light);
     border-radius: 50%;
-    animation: bounce 2.3s infinite ease-in-out;
+    animation: bounce 3s infinite ease-in-out;
 }
 
 .dots span:nth-child(2) {
