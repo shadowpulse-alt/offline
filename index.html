@@ -1,58 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Migration des services – État d’avancement</title>
-    <!-- Google Font Montserrat -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      /* Emoji bounce animation */
-      .emoji {
-        display: inline-block;
-        animation: emoji-bounce 1s infinite ease-in-out;
-      }
-      .status-list li:nth-child(1) .emoji { animation-delay: 0s; }
-      .status-list li:nth-child(2) .emoji { animation-delay: 0.2s; }
-      .status-list li:nth-child(3) .emoji { animation-delay: 0.4s; }
-      .status-list li:nth-child(4) .emoji { animation-delay: 0.6s; }
-      @keyframes emoji-bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="icon">
-        <svg
-          width="80"
-          height="80"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-            fill="var(--color-light)"
-            opacity="0.2"
-          />
-          <path
-            d="M8 12l4-4 4 4M12 16V8"
-            stroke="var(--color-light)"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Migration des services – État d’avancement</title>
+  <!-- Google Font Montserrat -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="icon">
+      <!-- SVG d’illustration -->
+      <svg width="80" height="80" viewBox="0 0 24 24" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" fill="var(--color-light)" opacity="0.2"/>
+        <path d="M8 12l4-4 4 4M12 16V8"
+              stroke="var(--color-light)" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
 
+    <section class="info">
       <h1>Maintenance programmée – Interruption temporaire de service</h1>
       <p>
         Chères clientes, chers clients,<br />
@@ -60,25 +32,26 @@
         infrastructure. Cette opération, essentielle pour améliorer la
         performance et la fiabilité de nos services, entraînera une
         indisponibilité temporaire.<br />
-        ⚠️ <strong>Durée estimée : plusieurs jours.</strong><br />
+        ⚠️ <strong>Durée estimée : plusieurs jours.</strong><br />
         Nous mettons tout en œuvre pour réduire au maximum l’impact et accélérer
         la remise en service. Nous vous remercions de votre patience et de votre
         compréhension.
       </p>
+    </section>
 
+    <section class="status">
       <h1>Migration des services – État d’avancement</h1>
       <ul class="status-list">
-        <li><span class="emoji">✅</span> panel.3dhost.tech</li>
-        <li><span class="emoji">✅</span> youtubedl.3dhost.tech</li>
-        <li><span class="emoji">✅</span> git.3dhost.tech</li>
-        <li><span class="emoji">⏳</span> nextcloud.3dhost.tech – migration en cours</li>
+        <li><span class="emoji">✅</span> panel.3dhost.tech (Panel Pterodactyl)</li>
+        <li><span class="emoji">✅</span> youtubedl.3dhost.tech (YouTubeDL)</li>
+        <li><span class="emoji">✅</span> git.3dhost.tech (Forgejo)</li>
+        <li><span class="emoji">⏳</span> nextcloud.3dhost.tech (Nextcloud) – migration en cours</li>
       </ul>
+    </section>
 
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div class="dots">
+      <span></span><span></span><span></span>
     </div>
-  </body>
+  </div>
+</body>
 </html>
