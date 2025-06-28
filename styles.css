@@ -88,7 +88,8 @@ body::after {
     max-width: 600px;
     width: 100%;
     background: rgba(31, 41, 51, 0.8);
-    padding: 3rem;
+    padding: 2rem;
+    /* réduit de 3rem à 2rem */
     border-radius: 1rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
@@ -125,16 +126,31 @@ body::after {
     }
 }
 
+/* TITRE PRINCIPAL */
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    /* réduit de 2.5rem à 2rem */
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    /* augmente l’espacement sous le titre */
 }
 
+/* TEXTE DE PARAGRAPHE */
 p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    /* réduit légèrement */
+    line-height: 1.8;
+    /* plus aéré */
     margin-bottom: 2rem;
-    line-height: 1.6;
+    /* plus d’espace sous les paragraphes */
+}
+
+/* Countdown */
+#countdown {
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-left: 0.25rem;
 }
 
 /* Animated loading dots */
@@ -173,57 +189,28 @@ p {
     }
 }
 
-/* Bouton vers la page de status */
-.status-btn {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    color: var(--color-light);
-    background: linear-gradient(45deg, var(--color-secondary), var(--color-primary));
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.status-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-}
-
-.status-btn:active {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
+/* Responsive */
 @media (max-width: 480px) {
     .container {
-        padding: 2rem;
+        padding: 1.5rem;
+        /* un peu moins sur mobile */
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        /* titre un peu plus petit */
     }
 
     p {
+        font-size: 0.95rem;
+    }
+
+    #countdown {
         font-size: 1rem;
     }
 
     .dots span {
         width: 12px;
         height: 12px;
-    }
-}
-
-/* Style pour le countdown */
-#countdown {
-    font-weight: 600;
-    font-size: 1.1rem;
-}
-
-/* Responsive pour le countdown */
-@media (max-width: 480px) {
-    #countdown {
-        font-size: 1rem;
     }
 }
