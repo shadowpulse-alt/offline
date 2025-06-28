@@ -37,24 +37,44 @@
           />
         </svg>
       </div>
+
       <h1>Maintenance programmée – Interruption temporaire de service</h1>
       <p>
-        Chères clientes, chers clients,<br/>
+        Chères clientes, chers clients,<br />
         Nous réalisons actuellement une mise à niveau majeure de notre
         infrastructure. Cette opération, essentielle pour améliorer la
         performance et la fiabilité de nos services, entraînera une
-        indisponibilité temporaire.<br/>
-        <strong>⏳Durée restante estimée : 5 heures.</strong><br/>
+        indisponibilité temporaire.<br />
+        ⚠️ <strong>⏳ Temps restant estimé : <span id="countdown">--:--:--</span></strong><br />
         Nous mettons tout en œuvre pour réduire au maximum l’impact et accélérer
         la remise en service. Nous vous remercions de votre patience et de votre
         compréhension.
       </p>
+
       <div class="dots">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      </a>   
     </div>
+
+    <script>
+      function updateCountdown() {
+        const now = new Date();
+        let target = new Date();
+        target.setHours(23, 0, 0, 0);
+        // Si on est déjà passé après 23h, on compte jusqu'à demain 23h
+        if (now > target) {
+          target.setDate(target.getDate() + 1);
+        }
+        const diff = target - now;
+        const h = String(Math.floor(diff / (1000 * 60 * 60))).padStart(2, '0');
+        const m = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        const s = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+        document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
   </body>
 </html>

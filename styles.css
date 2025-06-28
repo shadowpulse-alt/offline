@@ -214,3 +214,16 @@ p {
         height: 12px;
     }
 }
+
+/* Style pour le countdown */
+#countdown {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Responsive pour le countdown */
+@media (max-width: 480px) {
+    #countdown {
+        font-size: 1rem;
+    }
+}
