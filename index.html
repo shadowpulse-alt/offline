@@ -13,14 +13,20 @@
 <body>
   <div class="container">
     <div class="icon">
-      <!-- Icône "offline" stylée -->
-      <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="10" fill="var(--color-light)" opacity="0.2" />
-        <!-- Symbole “offline” (croix + nuage) -->
-        <path
-          d="M8.5 11C8.22386 11 8 10.7761 8 10.5C8 7.46243 10.4624 5 13.5 5C16.5376 5 19 7.46243 19 10.5C19 11.4782 18.7581 12.3931 18.3529 13.1722M5 16.5C5 14.0147 7.01472 12 9.5 12H14C16.2091 12 18 13.7909 18 16C18 18.2091 16.2091 20 14 20H9.5C7.01472 20 5 17.9853 5 15.5V16.5Z"
-          stroke="var(--color-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <line x1="7" y1="17" x2="17" y2="7" stroke="var(--color-light)" stroke-width="2" stroke-linecap="round" />
+      <!-- Icône serveur down ultra claire -->
+      <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Serveur -->
+        <rect x="8" y="16" width="48" height="14" rx="3" fill="var(--color-light)" opacity="0.17" />
+        <rect x="8" y="34" width="48" height="14" rx="3" fill="var(--color-light)" opacity="0.13" />
+        <rect x="8" y="52" width="48" height="7" rx="2.5" fill="var(--color-light)" opacity="0.09" />
+        <!-- Détails serveurs -->
+        <circle cx="16" cy="23" r="2.2" fill="var(--color-light)" opacity="0.5" />
+        <circle cx="16" cy="41" r="2.2" fill="var(--color-light)" opacity="0.5" />
+        <circle cx="16" cy="55" r="1.5" fill="var(--color-light)" opacity="0.3" />
+        <!-- Warning / Error -->
+        <circle cx="48" cy="23" r="5" fill="#ff5252" />
+        <rect x="47.25" y="18.2" width="1.5" height="4.2" rx="0.75" fill="#fff" />
+        <rect x="47.25" y="23.6" width="1.5" height="1.7" rx="0.75" fill="#fff" />
       </svg>
     </div>
 
@@ -28,8 +34,8 @@
     <p>
       Yo !<br />
       Tu t’attendais à Netflix, c’est tombé sur cette page… <br>
-      <strong>Nos serveurs sont partis recharger leur batterie solaire, ou alors ils font une sieste technique. (Même
-        les robots doivent rebooter, t’inquiète !)</strong><br />
+      <strong>Nos serveurs font une pause technique, histoire de revenir plus balèzes ! (Même les robots doivent
+        rebooter, t’inquiète !)</strong><br />
       <br>
       Merci pour ta patience de Jedi. Si t’as des questions ou un besoin urgent, envoie-nous un hibou, un pigeon
       voyageur, ou juste un mail (ça marche mieux).
