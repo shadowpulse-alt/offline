@@ -28,10 +28,8 @@
     <p>
       Yo !<br />
       Tu t’attendais à Netflix, c’est tombé sur cette page… <br>
-      <strong>Nos serveurs sont partis recharger leur batterie solaire, ou alors ils sont juste en train de faire une
-        sieste technique. (Ça arrive aux meilleurs, même aux bots.)</strong><br />
-      <br>
-      <strong>⏳ Estimation du retour à la normale : <span id="countdown">--:--:--</span></strong><br />
+      <strong>Nos serveurs sont partis recharger leur batterie solaire, ou alors ils font une sieste technique. (Même
+        les robots doivent rebooter, t’inquiète !)</strong><br />
       <br>
       Merci pour ta patience de Jedi. Si t’as des questions ou un besoin urgent, envoie-nous un hibou, un pigeon
       voyageur, ou juste un mail (ça marche mieux).
@@ -43,29 +41,6 @@
       <span></span>
     </div>
   </div>
-
-  <script>
-    function updateCountdown() {
-      const now = new Date();
-      let target = new Date();
-      target.setHours(23, 0, 0, 0);
-      if (now > target) {
-        target.setDate(target.getDate() + 1);
-      }
-      const diff = target - now;
-      const h = String(Math.floor(diff / (1000 * 60 * 60))).padStart(2, '0');
-      const m = String(
-        Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
-      ).padStart(2, '0');
-      const s = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(
-        2,
-        '0'
-      );
-      document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
 </body>
 
 </html>
